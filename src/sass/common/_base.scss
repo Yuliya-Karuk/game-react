@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Overlock, sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  :root[theme='dark'] & {
+    background: center no-repeat url('../../assets/bg_dark.webp');
+    background-size: cover;
+  }
+
+  :root[theme='light'] & {
+    background: center no-repeat url('../../assets/bg_light.webp');
+    background-size: cover;
+  }
+
+  overflow-x: hidden;
+}
+
+h1 {
+  @include font(5rem, 900, 1.05);
+
+  color: var(--color-primary);
+
+  @media screen and (width <= 768px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (width <= 480px) {
+    font-size: 2rem;
+  }
+}

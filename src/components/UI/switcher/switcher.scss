@@ -1,0 +1,57 @@
+@import '../../../sass/common/constants';
+@import '../../../sass/common/placeholders';
+
+.switcher {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.switcher__label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+}
+
+.switcher__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switcher__round {
+  position: absolute;
+  border-radius: 34px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  inset: 0;
+
+  @extend %transition;
+}
+
+.switcher__round::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: auto 0;
+  background: center no-repeat #df99fc url('../../../assets/night.png');
+  content: '';
+
+  @extend %transition;
+}
+
+.switcher__input:checked+.switcher__round {
+  background-color: #283d14;
+}
+
+.switcher__input:checked+.switcher__round::before {
+  background: center no-repeat #baa2b5 url('../../../assets/sun.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(20px);
+}
