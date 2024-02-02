@@ -1,0 +1,44 @@
+@import '../../sass/common/constants';
+@import '../../sass/common/mixins';
+
+.game-field {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: calc(100vh - 170px);
+  min-height: 440px;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  :root[theme='dark'] & {
+    background: center no-repeat url('../../assets/main_dark.webp');
+    background-size: contain;
+
+    @media screen and (width <= 480px) {
+      border-radius: 50px;
+      background: linear-gradient(180deg, var(--color-shadow-dark) 0%, var(--color-shadow-dark) 100%), rgb(0 0 0 / 50%);
+    }
+  }
+
+  :root[theme='light'] & {
+    background: center no-repeat url('../../assets/main_light.webp');
+    background-size: contain;
+
+    @media screen and (width <= 480px) {
+      border-radius: 50px;
+      background: linear-gradient(180deg, var(--color-shadow-dark) 0%, var(--color-shadow-dark) 100%), rgb(0 0 0 / 50%);
+    }
+  }
+}
+
+.game-field__container {
+  display: flex;
+  width: fit-content;
+  flex-flow: column wrap;
+}
+
+.game-field__row {
+  display: flex;
+}

@@ -1,0 +1,9 @@
+.top-clues {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-clues__column {
+  display: flex;
+  flex-direction: column;
+}

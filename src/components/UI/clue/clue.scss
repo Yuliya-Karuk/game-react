@@ -1,0 +1,48 @@
+@import '../../../sass/common/constants';
+@import '../../../sass/common/mixins';
+
+.clue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-main-border);
+  background-color: var(--color-bg-clue);
+  color: var(--color-bg-button);
+
+  @include font(1.8rem, 900, 1.05);
+
+  .game-field_hard & {
+    @include font(1.3rem, 900, 1.05);
+  }
+
+  .top-clues__column:nth-of-type(5n + 1):not(:first-of-type) & {
+    border-left: 1px solid var(--color-cell-initial);
+  }
+
+  .top-clues__column:nth-of-type(5n):not(:last-of-type) & {
+    border-right: 2px solid var(--color-cell-initial);
+  }
+
+  .left-clues__row:nth-of-type(5n + 1):not(:first-of-type) & {
+    border-top: 1px solid var(--color-cell-initial);
+  }
+
+  .left-clues__row:nth-of-type(5n):not(:last-of-type) & {
+    border-bottom: 2px solid var(--color-cell-initial);
+  }
+
+  .game-field_easy & {
+    width: 40px;
+    height: 40px;
+  }
+
+  .game-field_medium & {
+    width: 28px;
+    height: 28px;
+  }
+
+  .game-field_hard & {
+    width: 18px;
+    height: 18px;
+  }
+}

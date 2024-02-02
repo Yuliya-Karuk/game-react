@@ -1,0 +1,27 @@
+@import '../../sass/common/constants';
+@import '../../sass/common/mixins';
+
+.timer {
+  display: flex;
+  width: 400px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg-button);
+
+  :root[theme='dark'] & {
+    background: center no-repeat url('../../assets/timer_dark.png');
+    background-size: contain;
+  }
+
+  :root[theme='light'] & {
+    background: center no-repeat url('../../assets/timer_light.png');
+    background-size: contain;
+  }
+
+  @include font(3rem, 900, 1.05);
+
+  @media screen and (width <=480px) {
+    width: 300px;
+  }
+}
