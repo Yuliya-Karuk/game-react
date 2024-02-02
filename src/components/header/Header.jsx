@@ -10,7 +10,7 @@ export const Header = () => {
     <header className='header'>
       <div className='header__wrapper'>
         <div className='header__logo'>
-          <img className='header__img' src={logo} alt='logo icon'/>
+          <img className='header__logo-img' src={logo} alt='logo icon'/>
           <h1 className='header__title'>Nonograms</h1>
         </div>
         <Navigation />
