@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import { Footer } from './components/footer/Footer';
 import { Header } from './components/header/Header';
@@ -6,11 +7,11 @@ import './sass/index.scss';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </>
   );
 }
 
